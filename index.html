@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Загород</title>
+    <link rel="stylesheet" href="./assets/style/reset.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="loading-video">
+        <video src="./assets/video/Loading.mp4" autoplay muted></video>
+      </div>
+
+      <div id="background-video">
+        <video src="./assets/video/bg zagorod.mp4" autoplay muted></video>
+      </div>
+
+      <div id="content">
+        <div id="title">
+          <img src="./assets/img/Logo.svg" />
+        </div>
+
+        <div id="contentBody" class="content__body">
+          <h1 id="heading">Мы готовим для вас новый сайт</h1>
+
+          <div class="content__btns">
+            <button id="callButton">Позвонить</button>
+            <button id="requestButton">Оставить заявку</button>
+          </div>
+        </div>
+
+        <div id="footer" class="footer">
+          <img src="./assets/img/mail.svg" />
+
+          <a href="mailto:corp@zagorod23.ru">corp@zagorod23.ru</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalPhone" class="modal">
+      <div class="overlay"></div>
+      <div class="modal__body phone">
+        <div class="modal-content modal-phone">
+          <div class="modal-phone__body body-phone">
+            <div class="body-phone__content">
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+              <div class="circle"></div>
+            </div>
+
+            <button id="phone">+7 (861) 298-26-93</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modalForm" class="modal">
+      <div class="overlay2"></div>
+      <div class="modal__body form">
+        <div class="modal-content modal-form">
+          <img id="closeForm" class="form-close" src="./assets/img/close.svg" />
+          <div class="modal-form__body">
+            <svg
+              id="house"
+              width="92"
+              height="92"
+              viewBox="0 0 92 92"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                id="roof"
+                d="M77.0561 45.1439L46.0001 24.2629L14.9441 45.1439V82.1419H33.9581V55.5229H56.7751V82.1419H77.0561V45.1439Z"
+              />
+              <path
+                id="frame"
+                d="M52.972 59.325H37.761V82.1419H52.972V59.325Z"
+              />
+              <path
+                id="door"
+                d="M1 49.532L46.158 17.212L91 49.306V42.094L46.158 10L1 42.32V49.532Z"
+              />
+            </svg>
+
+            <form class="form" action="#" method="post">
+              <div class="form__body">
+                <div class="form__block">
+                  <label for="nameInp">Имя</label>
+                  <input
+                    autocomplete="off"
+                    maxlength="30"
+                    type="text"
+                    id="nameInp"
+                  />
+                </div>
+
+                <div class="form__block">
+                  <label for="inpEmail">Email</label>
+                  <input
+                    autocomplete="off"
+                    maxlength="30"
+                    required
+                    type="email"
+                    id="inpEmail"
+                  />
+                </div>
+
+                <div class="form__block">
+                  <label for="inpPhone">Телефон</label>
+                  <input
+                    autocomplete="off"
+                    placeholder="+7 (___) ___-__-__"
+                    type="text"
+                    id="inpPhone"
+                  />
+                </div>
+              </div>
+
+              <button type="submit">Оставить заявку</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/libs/inputmask.min.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
