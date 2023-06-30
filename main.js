@@ -1,25 +1,25 @@
-window.addEventListener("load", function () {
-  var loadingVideo = document.querySelector("#loading-video video");
-  var backgroundVideo = document.querySelector("#background-video video");
+// window.addEventListener("load", function () {
+var loadingVideo = document.querySelector("#loading-video video");
+var backgroundVideo = document.querySelector("#background-video video");
 
-  loadingVideo.addEventListener("timeupdate", function () {
-    if (loadingVideo.currentTime >= 3) {
-      document.getElementById("loading-video").style.display = "none";
-      document.getElementById("background-video").classList.add("show");
-      document.getElementById("content").classList.add("show");
+loadingVideo.addEventListener("timeupdate", function () {
+  if (loadingVideo.currentTime >= 3) {
+    document.getElementById("loading-video").style.display = "none";
+    document.getElementById("background-video").classList.add("show");
+    document.getElementById("content").classList.add("show");
 
-      setTimeout(function () {
-        document.getElementById("title").classList.add("show");
-        document.getElementById("footer").classList.add("show");
-        document.getElementById("callButton").classList.add("show");
-        document.getElementById("requestButton").classList.add("show");
-      }, 1000);
+    setTimeout(function () {
+      document.getElementById("title").classList.add("show");
+      document.getElementById("footer").classList.add("show");
+      document.getElementById("callButton").classList.add("show");
+      document.getElementById("requestButton").classList.add("show");
+    }, 1000);
 
-      setTimeout(function () {
-        document.getElementById("heading").classList.add("show");
-      }, 750);
-    }
-  });
+    setTimeout(function () {
+      document.getElementById("heading").classList.add("show");
+    }, 750);
+  }
+  // });
 
   backgroundVideo.addEventListener("timeupdate", function () {
     if (backgroundVideo.currentTime >= 8) {
