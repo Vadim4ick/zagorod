@@ -286,12 +286,14 @@ h1 {
 }
 
 .modal-content {
-  background: linear-gradient(
+  /* background: linear-gradient(
     180deg,
     rgba(39, 39, 39, 0.5) 0%,
     rgba(39, 39, 39, 0.5) 100%
   );
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px); */
+
+  background-color: #000;
 }
 
 .modal.active .modal-phone {
