@@ -193,6 +193,8 @@ h1 {
 
 .modal-form__body {
   padding: 36px;
+  position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   gap: 36px;
@@ -290,12 +292,29 @@ h1 {
     180deg,
     rgba(39, 39, 39, 0.5) 0%,
     rgba(39, 39, 39, 0.5) 100%
-  );
-  backdrop-filter: blur(50px); */
-
-  background-color: #000;
+  ); */
+  /* backdrop-filter: blur(50px); */
+  position: relative;
 }
 
+.modal-content::before,
+.modal-content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(50px);
+}
+
+.modal-content::before {
+  background: rgba(39, 39, 39, 0.5);
+}
+
+.modal-content::after {
+  z-index: -1;
+}
 .modal.active .modal-phone {
   transform: scale(1);
   transition: all 0.3s ease 0s;
@@ -325,6 +344,7 @@ h1 {
 .form-close {
   position: absolute;
   top: 16px;
+  z-index: 65;
   right: 16px;
   cursor: pointer;
 }
@@ -356,6 +376,7 @@ h1 {
 .body-phone button {
   font-size: 22px;
   color: #fff;
+  z-index: 5;
   text-decoration: none;
   font-family: "Montserrat-Semibold";
   font-weight: 600;
